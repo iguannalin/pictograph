@@ -15,14 +15,15 @@ window.addEventListener("load", () => {
   function initialize() {
     for (let i = 0; i < window.innerWidth; i+=chWidth) {
       for (let j = 0; j < window.innerHeight; j+=chHeight) {
-        container.innerHTML += `&nbsp;<img src="${room}.svg"/>&nbsp;`;
+        container.innerHTML += `&nbsp;<img src="https://iguannalin.github.io/pictograph/${room}.svg"/>&nbsp;`;
       }
     }
     rooms = rooms.filter((el) => el!=room)
     portal.innerText = rooms[getRandomInt(0,rooms.length)];
+    // portal.innerHTML = `<img src="${rooms[getRandomInt(0,rooms.length)]}.svg"/>`;
     portal.onclick = (e) => {
       e.preventDefault();
-      const text = `<!doctypehtml><title>text adventure</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/pictograph/index.css rel=stylesheet><script src=https://iguannalin.github.io/pictograph/index.js></script><div id=container></div><div id=overlay><a data-portalid=${portal.innerText} id=portal></a></div>`;
+      const text = `<!doctypehtml><title>pictograph</title><meta charset=utf-8><meta content="width=device-width,initial-scale=1"name=viewport><link href=https://iguannalin.github.io/pictograph/index.css rel=stylesheet><script src=https://iguannalin.github.io/pictograph/index.js></script><div id=container></div><div id=overlay><a data-portalid=${portal.innerText} id=portal></a></div>`;
       const blob = new Blob([text], {type: "text/html"});
       const blobUrl = URL.createObjectURL(blob);
       window.open(blobUrl, '_self');

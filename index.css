@@ -59,4 +59,5 @@ img {
   height: 20vh;
   background-color: var(--main-bg-color);
   box-shadow: #000000c2 -2px 0px 32px;
+  font-size: 3em;
 }
