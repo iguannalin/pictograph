@@ -30,6 +30,7 @@ body {
   align-items: center;
   flex-flow: row wrap;
   word-break: break-word;
+  margin-top: -10px;
   height: 100vh;
   width: 100vw;
 }
@@ -37,7 +38,7 @@ body {
 img {
   filter: invert(1);
   width: 70px;
-  padding: 2px;
+  padding: 6px 0 0 25px;
 }
 
 #overlay {

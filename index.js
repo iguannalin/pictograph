@@ -10,7 +10,7 @@ window.addEventListener("load", () => {
   let rooms = ["日", "月", "山", "水", "火"];
   const room = portalID ? portalID : rooms[getRandomInt(0,rooms.length)];
   const chWidth = 70;
-  const chHeight = 90;
+  const chHeight = 80;
 
   function initialize() {
     for (let i = 0; i < window.innerWidth; i+=chWidth) {
